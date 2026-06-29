@@ -417,8 +417,8 @@ body {
 
 <div id="success">
   <div class="success-icon">🫖</div>
-  <h2 class="success-title">Shukria! Your RSVP is in.</h2>
-  <p class="success-sub">The chai is brewing and the mithai is ready.<br>We can't wait to celebrate with you.</p>
+  <h2 class="success-title">Thanks! Your RSVP is in.</h2>
+  <p class="success-sub">The chai is brewing and the teacakes are ready.<br>We can't wait to celebrate with you.</p>
   <div style="margin-top:32px">
     <button class="hero-cta" onclick="resetForm()">↩ Edit my response</button>
   </div>
@@ -597,8 +597,8 @@ async function submitForm() {
   const payload = collectData();
   try {
     await fetch(SHEET_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: {'Content-Type':'application/json'},
+      method: 'POST',
+      mode: 'no-cors',
       body: JSON.stringify(payload)
     });
   } catch(e) { console.error(e); }
